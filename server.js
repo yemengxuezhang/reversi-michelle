@@ -1,4 +1,4 @@
-/************************/
+/******************************* */
 /* Set up the static file server */
 let static = require('node-static');
 
@@ -23,9 +23,9 @@ let file = new static.Server(directory);
 let app = http.createServer(
     function(request,response){
         request.addListener('end',
-          function(){
-               file.server(request,response);
-          }
+            function(){
+                file.server(request,response);
+            }
         ).resume();
     }
 ).listen(port);
