@@ -11,7 +11,7 @@ let directory = __dirname + '/public';
 
 /* if we aren't on Heroku, then we need to adjust our port and directory */
 
-if ((typeof port == 'undefined') || (port ===null)){
+if ((typeof port == 'undefined') || ( port === null)){
     port = 8080;
     directory = './public';
 }
@@ -26,7 +26,7 @@ let app = http.createServer(
           function(){
                file.server(request,response);
           }
-          ).resume();
+        ).resume();
     }
 ).listen(port);
 
